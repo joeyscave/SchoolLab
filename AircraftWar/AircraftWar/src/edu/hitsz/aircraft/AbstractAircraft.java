@@ -1,0 +1,63 @@
+package edu.hitsz.aircraft;
+
+import edu.hitsz.bullet.BaseBullet;
+import edu.hitsz.basic.AbstractFlyingObject;
+import edu.hitsz.observer.Subscriber;
+import edu.hitsz.prop.AbstractProp;
+
+import java.util.List;
+
+/**
+ * 所有种类飞机的抽象父类：
+ * 敌机（BOSS, ELITE, MOB），英雄飞机
+ *
+ * @author hitsz
+ */
+public abstract class AbstractAircraft extends AbstractFlyingObject{
+    /**
+     * 生命值
+     */
+    protected int maxHp;
+    protected int hp;
+
+    public AbstractAircraft(int locationX, int locationY, int speedX, int speedY, int hp) {
+        super(locationX, locationY, speedX, speedY);
+        this.hp = hp;
+        this.maxHp = hp;
+    }
+
+    public void decreaseHp(int decrease) {
+        hp -= decrease;
+        if (hp <= 0) {
+            hp = 0;
+            vanish();
+        }
+        if (hp > maxHp) {
+            hp = maxHp;
+        }
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+
+    /**
+     * 飞机射击方法，可射击对象必须实现
+     *
+     * @return 可射击对象需实现，返回子弹
+     * 非可射击对象空实现，返回null
+     */
+    public abstract List<BaseBullet> shoot();
+
+    /**
+     * 生成道具方法，敌机必须实现
+     *
+     * @return 敌机需实现，返回道具
+     * 英雄机对象空实现，返回null
+     */
+    public abstract AbstractProp generateProp();
+
+}
+
+

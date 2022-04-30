@@ -1,0 +1,278 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractFlyingObject
+{
+    # locationX:int
+    # locationY:int
+    # speedX:int
+    # speedY:int
+    # image:BufferedImage
+    # width:int
+    # height:int
+    # isValid:boolean
+
+    + AbstractFlyingObject(int locationX, int locationY, int speedX, int speedY)
+    + forward():void
+    + crash(AbstractFlyingObject flyingObject):boolean
+    + setLocation(double locationX, double locationY):void
+    + getLocationX():int
+    + getLocationY():int
+    + getSpeedY():int
+    + getImage():BufferedImage
+    + getWidth():int
+    + getHeight():int
+    + notValid():boolean
+    + vanish():void
+}
+abstract class AbstractAircraft
+{
+	# int maxHp
+    # int hp
+    + AbstractAircraft(int locationX, int locationY, int speedX, int speedY, int hp):void
+    + decreaseHp(int decrease):void
+    + getHp():int
+    + {abstract} shoot():List<BaseBullet>
+ }
+
+abstract class AbstractProp
+{
+    + AbstractProp(int locationX, int locationY, int speedX, int speedY):void
+    + active(AbstractAircraft heroAircraft, List<AbstractAircraft> enemyAircraft, List<BaseBullet> enemyBullet):void
+}
+
+abstract class BaseBullet
+{
+    - int power
+    + BaseBullet(int locationX, int locationY, int speedX, int speedY, int power):void
+    + forward():void
+	+ getPower():int
+}
+class HeroAircraft {
+    - int shootNum
+    - int power
+    - int direction
+    - {static} HeroAircraft heroAircraft
+    - {static} HeroAircraft(int locationX, int locationY, int speedX, int speedY, int hp):void
+    + {static} getHeroAircraft():HeroAircraft
+    + forward():void
+    + shoot():List<BaseBullet>
+}
+
+class MobEnemy implements Subscriber{
+    + MobEnemy(int locationX, int locationY, int speedX, int speedY, int hp):void
+    + forward():void
+    + shoot():List<BaseBullet>
+    + update():void
+}
+
+class EliteEnemy {
+    - int shootNum
+    - int power
+    - int direction
+    + EliteEnemy(int locationX, int locationY, int speedX, int speedY, int hp):void
+    + shoot():List<BaseBullet>
+}
+
+class BossEnemy {
+    - {static} boolean exist
+    + BossEnemy(int locationX, int locationY, int speedX, int speedY, int hp):void
+    + shoot():List<BaseBullet>
+    + vanish():void
+    + {static} getInstance():BossEnemy
+}
+
+class HeroBullet {
+    + HeroBullet(int locationX, int locationY,
+     int speedX, int speedY, int power):void
+}
+
+class EnemyBullet implements Subscriber{
+    + EnemyBullet(int locationX, int locationY,
+     int speedX, int speedY, int power):void
+}
+
+class BombProp implements Publisher{
+    - List<Subscriber> subscribers
+    + BombProp(int locationX, int locationY, int speedX, int speedY):void
+    + active():void
+    + getMusicPath():String
+    + notifySubscriber():void
+    + subscribe(Subscriber subscriber):void
+}
+
+class BulletProp {
+    - String type
+    + BulletProp(int locationX, int locationY, int speedX, int speedY, int IncreaseBullet):void
+    + active(AbstractAircraft heroAircraft, List<AbstractAircraft> enemyAircraft, List<BaseBullet> enemyBullet):void
+}
+
+class BloodProp {
+    - int IncreaseHP
+    + BloodProp(int locationX, int locationY, int speedX, int speedY, int IncreaseHP):void
+    + active(AbstractAircraft heroAircraft, List<AbstractAircraft> enemyAircraft, List<BaseBullet> enemyBullet):void
+}
+
+interface AbstractAircraftFactory {
+    + create():AbstractAircraft
+}
+
+interface AbstractPropFactory {
+    + create():AbstractProp
+}
+
+class EliteEnemyFactory{
+    + create():EliteEnemy
+}
+
+class MobEnemyFactory{
+    + create():MobEnemy
+}
+
+class BloodPropFactory{
+    + create(int x,int y):BloodProp
+}
+
+class BombPropFactory{
+    + create(int x,int y):BombProp
+}
+
+class BulletPropFactory{
+    + create(int x,int y):BulletProp
+}
+
+class Record{
+    - int score
+    - String name
+    - String date
+    + Record(int score, String name, String date):void
+    + compareTo(Record record):int
+    + toString():String
+    + getScore():int
+    + getName():String
+}
+
+interface RankDao{
+    + store():void
+    + load():void
+    + add(String name,int score,String date):void
+    + remove(int rank):void
+    + clear():void
+}
+
+class RankDaoImp{
+    - List<Record> rank
+    + toString():String
+    + store():void
+    + load():void
+    + add(String name,int score,String date):void
+    + remove(int rank):void
+    + clear():void
+}
+
+interface BulletPropAbstractStrategy{
+    + active(HeroAircraft heroAircraft):void
+}
+
+class BulletPropContext{
+    - BulletPropAbstractStrategy bulletPropAbstractStrategy
+    + BulletPropContext(String type):void
+    + active(HeroAircraft heroAircraft):void
+}
+
+class BulletPropAddShotNum{
+    - int IncreaseBullet
+    + BulletPropAddShotNum(int increaseBullet):void
+    + active(HeroAircraft heroAircraft):void
+}
+
+class BulletPropScattering{
+    + active(HeroAircraft heroAircraft):void
+}
+
+abstract class Settings{
+    + boolean audio;
+    + int backGroundIndex;
+    + int score;
+    + int enemyBlood;
+    + int enemySpeed;
+    + int enemyBulletPower;
+    + int heroBulletPower;
+    + double eliteEnemyEmergeProb;
+    + int bossEnemyEmergeScore;
+    + int bossBloodRaise;
+    + setGame():void
+    + set():void
+    + harder():void
+}
+
+class SettingsEasy extends Settings{
+    + set():void
+    + harder():void
+}
+class SettingsNormal extends Settings{
+    + set():void
+    + harder():void
+}
+class SettingsHard extends Settings{
+    + set():void
+    + harder():void
+}
+
+interface Publisher{
+    + notifySubscriber():void
+    + subscribe(Subscriber subscriber):void
+}
+
+interface Subscriber{
+    + update():void
+}
+
+
+AbstractFlyingObject <|-- AbstractAircraft
+AbstractFlyingObject <|-- AbstractProp
+AbstractFlyingObject <|-- BaseBullet
+AbstractProp <|-- BombProp
+AbstractProp <|-- BulletProp
+AbstractProp <|-- BloodProp
+
+AbstractAircraft <|-- HeroAircraft
+AbstractAircraft <|-- MobEnemy
+MobEnemy <|-- EliteEnemy
+EliteEnemy <|-- BossEnemy
+
+BaseBullet <|-- HeroBullet
+BaseBullet <|-- EnemyBullet
+
+AbstractAircraftFactory <|.. EliteEnemyFactory
+AbstractAircraftFactory <|.. MobEnemyFactory
+AbstractPropFactory <|.. BloodPropFactory
+AbstractPropFactory <|.. BombPropFactory
+AbstractPropFactory <|.. BulletPropFactory
+
+
+AbstractAircraft ..> BaseBullet
+
+AbstractAircraftFactory ..> AbstractAircraft
+EliteEnemyFactory ..> EliteEnemy
+MobEnemyFactory ..> MobEnemy
+AbstractPropFactory ..> AbstractProp
+BulletPropFactory ..> BulletProp
+BombPropFactory ..> BombProp
+BloodPropFactory ..> BloodProp
+
+RankDaoImp ..|> RankDao
+RankDaoImp ..> Record
+
+BulletPropContext ..> BulletPropAbstractStrategy
+BulletPropAddShotNum ..|>BulletPropAbstractStrategy
+BulletPropScattering ..|>BulletPropAbstractStrategy
+BulletPropAbstractStrategy ..> HeroAircraft
+BulletProp ..> BulletPropContext
+AbstractProp ..> AbstractAircraft
+
+Publisher ..o Subscriber
+
+
+
+@enduml

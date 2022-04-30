@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Nov 24 20:22:16 2021
+# Process ID: 7984
+# Current directory: G:/memory_w_r
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13320 G:\memory_w_r\memory_w_r.xpr
+# Log file: G:/memory_w_r/vivado.log
+# Journal file: G:/memory_w_r\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project G:/memory_w_r/memory_w_r.xpr
+INFO: [Project 1-313] Project file moved from 'F:/memory_w_r' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [IP_Flow 19-2162] IP 'clk_div' is locked:
+* IP definition 'Clocking Wizard (6.0)' for IP 'clk_div' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+WARNING: [IP_Flow 19-2162] IP 'led_mem' is locked:
+* IP definition 'Block Memory Generator (8.4)' for IP 'led_mem' (customized with software release 2018.2) has a different revision in the IP Catalog.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+INFO: [Project 1-230] Project 'memory_w_r.xpr' upgraded for this version of Vivado.
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1

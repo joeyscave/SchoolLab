@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+index 3 finished
+====================================
+Test end!
+----PASS!!!
+$finish called at time : 525 ns : File "C:/Users/86186/Desktop/decoder_38/decoder_38/decoder_38.src/testbench.v" Line 95

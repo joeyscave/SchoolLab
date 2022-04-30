@@ -1,0 +1,411 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Dec 23 21:05:57 2021
+# Process ID: 13216
+# Current directory: G:/calculator/calculator.runs/synth_1
+# Command line: vivado.exe -log calculator_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source calculator_top.tcl
+# Log file: G:/calculator/calculator.runs/synth_1/calculator_top.vds
+# Journal file: G:/calculator/calculator.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source calculator_top.tcl -notrace
+Command: synth_design -top calculator_top -part xc7a100tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 6148 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 394.609 ; gain = 99.809
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'calculator_top' [G:/calculator/calculator_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [G:/calculator/calculator.runs/synth_1/.Xil/Vivado-13216-612-30/realtime/clk_div_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (1#1) [G:/calculator/calculator.runs/synth_1/.Xil/Vivado-13216-612-30/realtime/clk_div_stub.v:5]
+WARNING: [Synth 8-350] instance 'u_clk_div' of module 'clk_div' requires 4 connections, but only 3 given [G:/calculator/calculator_top.v:24]
+INFO: [Synth 8-6157] synthesizing module 'calculator_hex' [G:/calculator/calculator_hex.v:1]
+WARNING: [Synth 8-5788] Register flag_reg in module calculator_hex is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_hex.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'calculator_hex' (2#1) [G:/calculator/calculator_hex.v:1]
+INFO: [Synth 8-6157] synthesizing module 'calculator_display' [G:/calculator/calculator_display.v:1]
+INFO: [Synth 8-226] default block is never used [G:/calculator/calculator_display.v:67]
+WARNING: [Synth 8-6014] Unused sequential element test_reg was removed.  [G:/calculator/calculator_display.v:66]
+WARNING: [Synth 8-5788] Register button_t_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:38]
+WARNING: [Synth 8-5788] Register temp_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:41]
+WARNING: [Synth 8-5788] Register led_ca_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:69]
+WARNING: [Synth 8-5788] Register led_cb_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:70]
+WARNING: [Synth 8-5788] Register led_cc_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:71]
+WARNING: [Synth 8-5788] Register led_cd_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:72]
+WARNING: [Synth 8-5788] Register led_ce_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:73]
+WARNING: [Synth 8-5788] Register led_cf_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:74]
+WARNING: [Synth 8-5788] Register led_cg_reg in module calculator_display is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [G:/calculator/calculator_display.v:75]
+WARNING: [Synth 8-3848] Net led_dp in module/entity calculator_display does not have driver. [G:/calculator/calculator_display.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'calculator_display' (3#1) [G:/calculator/calculator_display.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'calculator_top' (4#1) [G:/calculator/calculator_top.v:1]
+WARNING: [Synth 8-3331] design calculator_display has unconnected port led_dp
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 451.063 ; gain = 156.262
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 451.063 ; gain = 156.262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 451.063 ; gain = 156.262
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tfgg484-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [g:/calculator/calculator.srcs/sources_1/ip/clk_div/clk_div/clk_div_in_context.xdc] for cell 'u_clk_div'
+Finished Parsing XDC File [g:/calculator/calculator.srcs/sources_1/ip/clk_div/clk_div/clk_div_in_context.xdc] for cell 'u_clk_div'
+Parsing XDC File [G:/calculator/clk.xdc]
+WARNING: [Constraints 18-619] A clock with name 'clk' already exists, overwriting the previous clock with the same name. [G:/calculator/clk.xdc:1]
+Finished Parsing XDC File [G:/calculator/clk.xdc]
+Parsing XDC File [G:/calculator/pin.xdc]
+Finished Parsing XDC File [G:/calculator/pin.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/calculator/pin.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/calculator_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/calculator_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 797.652 ; gain = 0.000
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 797.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 797.652 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 797.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 797.652 ; gain = 502.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tfgg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 797.652 ; gain = 502.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  g:/calculator/calculator.srcs/sources_1/ip/clk_div/clk_div/clk_div_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  g:/calculator/calculator.srcs/sources_1/ip/clk_div/clk_div/clk_div_in_context.xdc, line 4).
+Applied set_property DONT_TOUCH = true for u_clk_div. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 797.652 ; gain = 502.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 797.652 ; gain = 502.852
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 10    
++---Multipliers : 
+	                 8x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   7 Input      1 Bit        Muxes := 1     
+	  16 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module calculator_hex 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Multipliers : 
+	                 8x32  Multipliers := 1     
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   7 Input      1 Bit        Muxes := 1     
+Module calculator_display 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+	  16 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [G:/calculator/calculator_hex.v:41]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 2 [G:/calculator/calculator_hex.v:38]
+DSP Report: Generating DSP cal_result0, operation Mode is: A*B.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: Generating DSP cal_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: Generating DSP cal_result0, operation Mode is: A*B.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: Generating DSP cal_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: Generating DSP cal_result0, operation Mode is: A*B.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: Generating DSP cal_result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+DSP Report: operator cal_result0 is absorbed into DSP cal_result0.
+WARNING: [Synth 8-3331] design calculator_display has unconnected port led_dp
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 797.652 ; gain = 502.852
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name    | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|calculator_hex | A*B            | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_hex | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_hex | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_hex | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_hex | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|calculator_hex | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++---------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'u_clk_div/clk_out1' to pin 'u_clk_div/bbstub_clk_out1/O'
+WARNING: [Synth 8-565] redefining clock 'clk'
+INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 834.535 ; gain = 539.734
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 894.953 ; gain = 600.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [G:/calculator/calculator_hex.v:14]
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module u_clk_div has unconnected pin reset
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clk_div       |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |clk_div |     1|
+|2     |CARRY4  |   280|
+|3     |DSP48E1 |     5|
+|4     |LUT1    |    24|
+|5     |LUT2    |   204|
+|6     |LUT3    |   642|
+|7     |LUT4    |    77|
+|8     |LUT5    |    38|
+|9     |LUT6    |   177|
+|10    |FDCE    |    53|
+|11    |FDPE    |     9|
+|12    |FDRE    |    41|
+|13    |IBUF    |    21|
+|14    |OBUF    |    15|
+|15    |OBUFT   |     1|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------+------+
+|      |Instance               |Module             |Cells |
++------+-----------------------+-------------------+------+
+|1     |top                    |                   |  1589|
+|2     |  u_calculator_display |calculator_display |   153|
+|3     |  u_calculator_hex     |calculator_hex     |   775|
++------+-----------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 895.965 ; gain = 254.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 895.965 ; gain = 601.164
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 285 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 895.965 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+41 Infos, 17 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 895.965 ; gain = 612.637
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 895.965 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'G:/calculator/calculator.runs/synth_1/calculator_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file calculator_top_utilization_synth.rpt -pb calculator_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 23 21:06:31 2021...

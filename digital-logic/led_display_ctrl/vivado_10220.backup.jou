@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Dec  4 18:42:12 2021
+# Process ID: 10220
+# Current directory: F:/led_display_ctrl
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6624 F:\led_display_ctrl\led_display_ctrl.xpr
+# Log file: F:/led_display_ctrl/vivado.log
+# Journal file: F:/led_display_ctrl\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project F:/led_display_ctrl/led_display_ctrl.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse F:/led_display_ctrl/led_display_ctrl.v
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/led_display_ctrl.v] -no_script -reset -force -quiet
+remove_files  C:/Users/Administrator/Desktop/led_display_ctrl.v
+export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/testbench.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/Administrator/Desktop/testbench.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse F:/led_display_ctrl/testbench.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source testbench.tcl
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1

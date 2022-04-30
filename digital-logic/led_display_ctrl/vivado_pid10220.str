@@ -1,0 +1,832 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 10220
+License: Customer
+
+Current time: 	Sat Dec 04 18:42:21 CST 2021
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 405 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Administrator
+User home directory: C:/Users/Administrator
+User working directory: F:/led_display_ctrl
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	F:/led_display_ctrl/vivado.log
+Vivado journal file location: 	F:/led_display_ctrl/vivado.jou
+Engine tmp dir: 	F:/led_display_ctrl/.Xil/Vivado-10220-PA11
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	154 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 604 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 68 MB (+68664kb) [00:00:03]
+// [Engine Memory]: 575 MB (+451017kb) [00:00:03]
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: F:\led_display_ctrl\led_display_ctrl.xpr. Version: Vivado v2018.3 
+// WARNING: HEventQueue.dispatchEvent() is taking  1469 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project F:/led_display_ctrl/led_display_ctrl.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project F:/led_display_ctrl/led_display_ctrl.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 663 MB. GUI used memory: 43 MB. Current time: 12/4/21, 6:42:23 PM CST
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 87 MB (+16448kb) [00:00:08]
+// [Engine Memory]: 694 MB (+94863kb) [00:00:08]
+// [GUI Memory]: 101 MB (+10617kb) [00:00:08]
+// WARNING: HEventQueue.dispatchEvent() is taking  1395 ms.
+// Project name: led_display_ctrl; location: F:/led_display_ctrl; part: xc7a100tfgg484-1
+// [Engine Memory]: 798 MB (+73043kb) [00:00:10]
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 842.855 ; gain = 208.191 
+dismissDialog("Open Project"); // bx (cp)
+// a (cp): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Tcl Message: update_compile_order -fileset sim_1 
+// [GUI Memory]: 112 MB (+5798kb) [00:00:15]
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 2, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 2, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ac (al, cp)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ac (al, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("F:/led_display_ctrl/led_display_ctrl.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 7 seconds
+dismissDialog("Add Sources"); // c (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse F:/led_display_ctrl/led_display_ctrl.v 
+// [GUI Memory]: 119 MB (+952kb) [00:00:48]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, led_display_ctrl (led_display_ctrl.v)]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, led_display_ctrl (led_display_ctrl.v)]", 4, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// ad (cp): Unable to Open File: addNotify
+selectButton(PAResourceOtoP.OpenFileAction_CANCEL, "Cancel"); // a (ad)
+dismissDialog("Unable to Open File"); // ad (cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 2); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 2); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, led_display_ctrl.v]", 3, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/led_display_ctrl.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/Administrator/Desktop/led_display_ctrl.v 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 3); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 4); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files]", 7); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Non-module Files, testbench.v]", 8, false, false, false, false, true, false); // B (D, cp) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // af (al, cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cp): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cp)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/Administrator/Desktop/testbench.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  -fileset sim_1 C:/Users/Administrator/Desktop/testbench.v 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 5, true, false, false, false, true, false); // B (D, cp) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RUN, "Run Simulation"); // ac (al, cp)
+selectMenu(PAResourceCommand.PACommandNames_SIMULATION_RESET, "Reset Simulation"); // ac (al, cp)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ac (al, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cp): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("F:/led_display_ctrl/testbench.v");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 6 seconds
+dismissDialog("Add Sources"); // c (cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 -norecurse F:/led_display_ctrl/testbench.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Elapsed time: 36 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 6); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Syntax Error Files]", 6); // B (D, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v)]", 7); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v)]", 7); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v)]", 7, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, testbench (testbench.v)]", 7, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "led_display_ctrl.v", 1); // k (j, cp)
+// WARNING: HEventQueue.dispatchEvent() is taking  6906 ms.
+// Elapsed time: 1656 seconds
+selectCodeEditor("led_display_ctrl.v", 139, 254); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 811 MB. GUI used memory: 54 MB. Current time: 12/4/21, 7:12:25 PM CST
+// Elapsed time: 15 seconds
+selectCodeEditor("led_display_ctrl.v", 25, 297); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 158, 305); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 149, 299); // cl (w, cp)
+// Elapsed time: 521 seconds
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 207 seconds
+selectCodeEditor("led_display_ctrl.v", 229, 265); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 255, 231); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 282, 198); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 289, 206); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 290, 219); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 19, 289); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 206, 294); // cl (w, cp)
+// Elapsed time: 33 seconds
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("led_display_ctrl.v", 123, 333); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("led_display_ctrl.v", 185, 175); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 186, 194); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 180, 236); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 170, 311); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 197, 339); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 200, 348); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 23, 139); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("led_display_ctrl.v", 292, 70); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 299, 80); // cl (w, cp)
+// Elapsed time: 286 seconds
+selectCodeEditor("led_display_ctrl.v", 157, 112); // cl (w, cp)
+// Elapsed time: 545 seconds
+selectCodeEditor("led_display_ctrl.v", 75, 142); // cl (w, cp)
+// Elapsed time: 67 seconds
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 811 MB. GUI used memory: 51 MB. Current time: 12/4/21, 7:42:26 PM CST
+// Elapsed time: 27 seconds
+selectCodeEditor("led_display_ctrl.v", 91, 218); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 282, 379); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 274, 393); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 95, 409); // cl (w, cp)
+// Elapsed time: 28 seconds
+selectCodeEditor("led_display_ctrl.v", 171, 403); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 171, 419); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 167, 412); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 167, 422); // cl (w, cp)
+// Elapsed time: 36 seconds
+selectCodeEditor("led_display_ctrl.v", 127, 315); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 146, 315); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("led_display_ctrl.v", 318, 189); // cl (w, cp)
+// Elapsed time: 56 seconds
+selectCodeEditor("led_display_ctrl.v", 117, 62); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 89, 144); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 78, 68); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 91, 120); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 78, 83); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 254, 147); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 290, 159); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 325, 116); // cl (w, cp)
+// Elapsed time: 94 seconds
+selectCodeEditor("led_display_ctrl.v", 36, 446); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 229, 293); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 174, 262); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 310, 272); // cl (w, cp)
+// Elapsed time: 132 seconds
+selectCodeEditor("led_display_ctrl.v", 307, 246); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("led_display_ctrl.v", 154, 256); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 77, 279); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 231, 306); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 259, 285); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("led_display_ctrl.v", 117, 239); // cl (w, cp)
+// Elapsed time: 100 seconds
+selectCodeEditor("led_display_ctrl.v", 138, 216); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 94, 217); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 236, 238); // cl (w, cp)
+// Elapsed time: 107 seconds
+selectCodeEditor("led_display_ctrl.v", 130, 363); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("led_display_ctrl.v", 154, 271); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 38, 372); // cl (w, cp)
+// Elapsed time: 27 seconds
+selectCodeEditor("led_display_ctrl.v", 223, 124); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 116, 217); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("led_display_ctrl.v", 155, 335); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 103, 125); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 246, 311); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 257, 328); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("led_display_ctrl.v", 102, 357); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 219, 258); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 308, 327); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 195, 352); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 78, 392); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("led_display_ctrl.v", 158, 354); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 158, 372); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 100, 371); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("led_display_ctrl.v", 132, 219); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 219, 134); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 189, 164); // cl (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("led_display_ctrl.v", 126, 178); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 111, 112); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 64, 178); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 109, 206); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 152, 158); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 169, 127); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("led_display_ctrl.v", 39, 217); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 151, 151); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 163, 163); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 0, 253); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 116, 201); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 75, 217); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 115, 193); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 23, 248); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 257, 213); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("led_display_ctrl.v", 284, 219); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 61 seconds
+selectCodeEditor("led_display_ctrl.v", 33, 158); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("led_display_ctrl.v", 222, 217); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("led_display_ctrl.v", 423, 232); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("led_display_ctrl.v", 99, 220); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 283, 249); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 283, 257); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 243, 237); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 200, 272); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 333, 255); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 332, 234); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 331, 248); // cl (w, cp)
+// Elapsed time: 62 seconds
+selectCodeEditor("led_display_ctrl.v", 26, 348); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 103, 346); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 117, 352); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 109, 373); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 237, 389); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 167, 366); // cl (w, cp)
+// Elapsed time: 80 seconds
+selectCodeEditor("led_display_ctrl.v", 96, 382); // cl (w, cp)
+// Elapsed time: 41 seconds
+selectCodeEditor("led_display_ctrl.v", 77, 354); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 96, 352); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 43, 413); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 52, 412); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 143, 390); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("led_display_ctrl.v", 476, 147); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 443, 238); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 440, 249); // cl (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("led_display_ctrl.v", 130, 275); // cl (w, cp)
+// Elapsed time: 158 seconds
+selectCodeEditor("led_display_ctrl.v", 98, 258); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 42, 448); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 104, 249); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 362, 284); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 362, 291); // cl (w, cp)
+// WARNING: HEventQueue.dispatchEvent() is taking  1071 ms.
+// Elapsed time: 331 seconds
+selectCodeEditor("led_display_ctrl.v", 76, 409); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("led_display_ctrl.v", 241, 375); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 811 MB. GUI used memory: 50 MB. Current time: 12/4/21, 8:12:26 PM CST
+// Elapsed time: 68 seconds
+selectCodeEditor("led_display_ctrl.v", 251, 386); // cl (w, cp)
+// Elapsed time: 169 seconds
+selectCodeEditor("led_display_ctrl.v", 265, 113); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("led_display_ctrl.v", 298, 216); // cl (w, cp)
+// Elapsed time: 194 seconds
+selectCodeEditor("led_display_ctrl.v", 301, 115); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("led_display_ctrl.v", 160, 162); // cl (w, cp)
+// Elapsed time: 66 seconds
+selectCodeEditor("led_display_ctrl.v", 160, 332); // cl (w, cp)
+// Elapsed time: 61 seconds
+selectCodeEditor("led_display_ctrl.v", 41, 107); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 92, 139); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 346, 150); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 325, 119); // cl (w, cp)
+// Elapsed time: 221 seconds
+selectCodeEditor("led_display_ctrl.v", 147, 256); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("led_display_ctrl.v", 149, 303); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 155, 287); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("led_display_ctrl.v", 111, 292); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 172, 314); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 157, 369); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 197, 311); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 209, 282); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 208, 290); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 123, 276); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 109, 294); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 55, 348); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 105, 325); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 0, 256); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 30, 324); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 5, 258); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 47, 437); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 42, 349); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 26, 293); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 29, 360); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 261, 149); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 289, 202); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 298, 155); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("led_display_ctrl.v", 55, 255); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 69, 270); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 59, 257); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 37, 276); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 58, 257); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 55, 271); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 57, 293); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 59, 314); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 60, 331); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 60, 350); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 61, 370); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 62, 393); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 59, 407); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 60, 428); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 23, 256); // cl (w, cp)
+// Elapsed time: 19 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("led_display_ctrl.v", 163, 255); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 194, 212); // cl (w, cp)
+// Elapsed time: 27 seconds
+selectCodeEditor("led_display_ctrl.v", 16, 256); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 206, 263); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 21, 252); // cl (w, cp)
+// Elapsed time: 166 seconds
+selectCodeEditor("led_display_ctrl.v", 344, 203); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 341, 162); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 342, 178); // cl (w, cp)
+// Elapsed time: 42 seconds
+selectCodeEditor("led_display_ctrl.v", 23, 291); // cl (w, cp)
+// Elapsed time: 212 seconds
+selectCodeEditor("led_display_ctrl.v", 284, 59); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 811 MB. GUI used memory: 51 MB. Current time: 12/4/21, 8:42:26 PM CST
+// Elapsed time: 789 seconds
+selectCodeEditor("led_display_ctrl.v", 139, 316); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 93, 186); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("led_display_ctrl.v", 272, 258); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("led_display_ctrl.v", 195, 256); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("led_display_ctrl.v", 195, 257); // cl (w, cp)
+// Elapsed time: 96 seconds
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("led_display_ctrl.v", 216, 371); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("led_display_ctrl.v", 226, 350); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("led_display_ctrl.v", 125, 292); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("led_display_ctrl.v", 108, 289); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 97, 362); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 124, 295); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 168, 294); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 140, 448); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 269, 231); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 264, 191); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 143, 313); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'c'); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 166, 315); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 13 seconds
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 17 seconds
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "led_display_ctrl.v", 'v'); // cl (w, cp)
+// Elapsed time: 30 seconds
+selectCodeEditor("led_display_ctrl.v", 118, 276); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 119, 446); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 117, 386); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 117, 394); // cl (w, cp)
+// Run Command: RDIResourceCommand.RDICommands_UNSELECT_ALL
+selectCodeEditor("led_display_ctrl.v", 119, 393); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 121, 331); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 120, 216); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 117, 390); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("led_display_ctrl.v", 143, 375); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("led_display_ctrl.v", 232, 310); // cl (w, cp)
+// Elapsed time: 28 seconds
+selectCodeEditor("led_display_ctrl.v", 238, 195); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 214, 294); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("led_display_ctrl.v", 230, 201); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 237, 271); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 216, 335); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("led_display_ctrl.v", 215, 352); // cl (w, cp)
+// Elapsed time: 110 seconds
+selectCodeEditor("led_display_ctrl.v", 165, 271); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 149, 274); // cl (w, cp)
+// Elapsed time: 37 seconds
+selectCodeEditor("led_display_ctrl.v", 79, 348); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("led_display_ctrl.v", 49, 445); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 40, 406); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 38, 445); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 216, 290); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 280, 196); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 315, 84); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 314, 180); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 274, 71); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 270, 214); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 265, 253); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "testbench.v", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "led_display_ctrl.v", 1); // k (j, cp)
+selectCodeEditor("led_display_ctrl.v", 184, 135); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("led_display_ctrl.v", 214, 31); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 215, 48); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 215, 63); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 218, 79); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 217, 104); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 236, 53); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 229, 182); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 229, 210); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 233, 133); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 241, 300); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 304, 218); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 312, 259); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 312, 280); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 327, 257); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 326, 268); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 337, 297); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 282, 289); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 303, 265); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false, false, false, false, true, false); // u (Q, cp) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_SETTINGS, "Simulation Settings..."); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// F (cp): Settings: addNotify
+// [Engine Memory]: 879 MB (+42442kb) [02:18:56]
+// WARNING: HEventQueue.dispatchEvent() is taking  1049 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 879 MB. GUI used memory: 66 MB. Current time: 12/4/21, 9:01:12 PM CST
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_ELABORATION, "Elaboration", 1); // i (Q, F)
+selectTab(PAResourceOtoP.ProjectSettingsSimulationPanel_TABBED_PANE, PAResourceOtoP.ProjectSettingsSimulationPanel_SIMULATION, "Simulation", 2); // i (Q, F)
+dismissDialog("Settings"); // F (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (Q, cp)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cp):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'F:/led_display_ctrl/led_display_ctrl.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'testbench' in fileset 'sim_1'... INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'F:/led_display_ctrl/led_display_ctrl.sim/sim_1/behav/xsim' 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: "xvlog --incr --relax -prj testbench_vlog.prj" INFO: [VRFC 10-2263] Analyzing Verilog file "F:/led_display_ctrl/led_display_ctrl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module led_display_ctrl INFO: [VRFC 10-2263] Analyzing Verilog file "F:/led_display_ctrl/testbench.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module testbench INFO: [VRFC 10-2263] Analyzing Verilog file "F:/led_display_ctrl/led_display_ctrl.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib INFO: [VRFC 10-311] analyzing module glbl 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '1' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'F:/led_display_ctrl/led_display_ctrl.sim/sim_1/behav/xsim' 
+// Tcl Message: Built simulation snapshot testbench_behav  ****** Webtalk v2018.3 (64-bit)   **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.  source F:/led_display_ctrl/led_display_ctrl.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [Common 17-206] Exiting Webtalk at Sat Dec  4 21:01:23 2021... 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'F:/led_display_ctrl/led_display_ctrl.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "testbench_behav -key {Behavioral:sim_1:Functional:testbench} -tclbatch {testbench.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2018.3 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// HMemoryUtils.trashcanNow. Engine heap size: 881 MB. GUI used memory: 73 MB. Current time: 12/4/21, 9:01:25 PM CST
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: source testbench.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } # run 1000ns 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'testbench_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 909.801 ; gain = 0.000 
+// 'd' command handler elapsed time: 7 seconds
+dismissDialog("Run Simulation"); // e (cp)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// [GUI Memory]: 134 MB (+9794kb) [02:19:14]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "testbench.v", 1); // k (j, cp)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 2); // k (j, cp)
+// Elapsed time: 13 seconds
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // B (f, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, led_en[7:0]]", 7); // a (r, cp)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 881 MB. GUI used memory: 73 MB. Current time: 12/4/21, 9:01:59 PM CST
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, led_en[7:0]]", 7); // a (r, cp)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "led_display_ctrl.v", 0); // k (j, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectCodeEditor("led_display_ctrl.v", 242, 180); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// Tcl Message: [Sat Dec  4 21:02:26 2021] Launched synth_1... Run output will be captured here: F:/led_display_ctrl/led_display_ctrl.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "testbench.v", 2); // k (j, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation]", 9, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_TASK
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RUN_FAILED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 2); // k (j, cp)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// ah (cp): Synthesis Failed: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cp)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-91] ambiguous clock in event control [F:/led_display_ctrl/led_display_ctrl.v:52]. ]", 4, false); // ah (Q, cp)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;F:\led_display_ctrl\led_display_ctrl.v;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (Q, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-91] ambiguous clock in event control [F:/led_display_ctrl/led_display_ctrl.v:52]. ]", 4, false); // ah (Q, cp)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;F:\led_display_ctrl\led_display_ctrl.v;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (Q, cp)
+// Elapsed time: 34 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'led_display_ctrl' [F:/led_display_ctrl/led_display_ctrl.v:1]. ]", 5, false); // ah (Q, cp)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;F:\led_display_ctrl\led_display_ctrl.v;-;;-;16;-;line;-;1;-;;-;16;-;"); // ah (Q, cp)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-91] ambiguous clock in event control [F:/led_display_ctrl/led_display_ctrl.v:52]. ]", 4, false); // ah (Q, cp)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;F:\led_display_ctrl\led_display_ctrl.v;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (Q, cp)
+selectCodeEditor("led_display_ctrl.v", 286, 136); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 293, 105); // cl (w, cp)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-91] ambiguous clock in event control [F:/led_display_ctrl/led_display_ctrl.v:52]. ]", 4, false); // ah (Q, cp)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;F:\led_display_ctrl\led_display_ctrl.v;-;;-;16;-;line;-;52;-;;-;16;-;"); // ah (Q, cp)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-91] ambiguous clock in event control [F:/led_display_ctrl/led_display_ctrl.v:52]. ]", 4, false); // ah (Q, cp)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-91] ambiguous clock in event control [F:/led_display_ctrl/led_display_ctrl.v:52]. ]", 4, false); // ah (Q, cp)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [Project 1-19] Could not find the file 'C:/Users/Administrator/Desktop/led_display_ctrl.v'.. ]", 2, true); // ah (Q, cp) - Node
+// Elapsed time: 53 seconds
+selectCodeEditor("led_display_ctrl.v", 328, 203); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 306, 226); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 324, 207); // cl (w, cp)
+selectCodeEditor("led_display_ctrl.v", 318, 226); // cl (w, cp)
+// Elapsed time: 59 seconds
+selectCodeEditor("led_display_ctrl.v", 334, 193); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// Tcl Message: launch_runs synth_1 -jobs 8 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Dec  4 21:06:08 2021] Launched synth_1... Run output will be captured here: F:/led_display_ctrl/led_display_ctrl.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 22 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// Tcl Message: launch_runs impl_1 -jobs 8 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Dec  4 21:06:34 2021] Launched impl_1... Run output will be captured here: F:/led_display_ctrl/led_display_ctrl.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_STEP_COMPLETED

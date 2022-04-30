@@ -1,0 +1,29 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class AbstractFlyingObject
+
+abstract class AbstractAircraft extends AbstractFlyingObject
+
+abstract class AbstractProp extends AbstractFlyingObject
+
+abstract class BaseBullet extends AbstractFlyingObject
+
+class HeroAircraft extends AbstractAircraft
+
+class MobEnemy extends AbstractAircraft
+
+class EliteEnemy extends MobEnemy
+
+class BossEnemy extends  EliteEnemy
+
+class HeroBullet extends BaseBullet
+
+class EnemyBullet extends BaseBullet
+
+class BombProp extends AbstractProp
+
+class BulletProp extends AbstractProp
+
+class BloodProp extends AbstractProp
+@enduml

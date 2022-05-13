@@ -1,4 +1,4 @@
-# digital-logic
-created for digital-logic lab
+# High Performance Compute
+created for hpc lab
 
-class website:https://hitsz-cslab.gitee.io/diglogic/
+class repo：[hpc: 高性能计算应用实践 (gitee.com)](https://gitee.com/hackenzhg/hpc)
